@@ -1,6 +1,5 @@
 # Model Card
 
-
 ## Model Details
 
 This binary classification model was created using a random forest classifier. Hyperparameter tuning was not performed on this model.
