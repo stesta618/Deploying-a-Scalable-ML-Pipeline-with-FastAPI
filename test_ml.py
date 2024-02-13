@@ -12,7 +12,7 @@ def test_train_model():
     """
     Test if the train_model function is returning a model of the expected type
     """
-    
+
     # Create a controlled dataset for testing
     data = pd.DataFrame(
         {
@@ -90,4 +90,3 @@ def test_compute_model_metrics():
     assert round(precision, 4) == expected_precision
     assert round(recall, 4) == expected_recall
     assert round(fbeta, 4) == expected_fbeta
-

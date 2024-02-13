@@ -19,12 +19,11 @@ print(data_path)
 data = pd.read_csv(data_path)
 
 # TODO: split the provided data to have a train dataset and a test dataset
-# Optional enhancement, use K-fold cross validation instead of a train-test 
+# Optional enhancement, use K-fold cross validation instead of a train-test
 # split.
-train, test = train_test_split(data,
-                               test_size = 0.15,
-                               random_state = 42,
-                                )
+train, test = train_test_split(data, 
+                               test_size=0.15,
+                               random_state=42)
 
 # DO NOT MODIFY
 cat_features = [
@@ -69,7 +68,7 @@ model = load_model(
     model_path
 )
 
-# TODO: use the inference function to run the model inferences on the test 
+# TODO: use the inference function to run the model inferences on the test
 # dataset.
 preds = inference(model, X_test)
 
@@ -77,7 +76,7 @@ preds = inference(model, X_test)
 p, r, fb = compute_model_metrics(y_test, preds)
 print(f"Precision: {p:.4f} | Recall: {r:.4f} | F1: {fb:.4f}")
 
-# TODO: compute the performance on model slices using the 
+# TODO: compute the performance on model slices using the
 # performance_on_categorical_slice function
 # iterate through the categorical features
 for col in cat_features:
@@ -96,5 +95,5 @@ for col in cat_features:
         )
         with open("slice_output.txt", "a") as f:
             print(f"{col}: {slicevalue}, Count: {count:,}", file=f)
-            print(f"Precision: {p:.4f} | Recall: {r:.4f} | F1: {fb:.4f}", 
+            print(f"Precision: {p:.4f} | Recall: {r:.4f} | F1: {fb:.4f}",
                   file=f)
