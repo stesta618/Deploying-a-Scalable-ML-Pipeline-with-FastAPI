@@ -6,6 +6,7 @@ from ml.data import process_data
 from ml.model import compute_model_metrics, train_model
 from sklearn.ensemble import RandomForestClassifier
 
+
 # TODO: implement the first test. Change the function name and input as needed
 def test_train_model():
     """
@@ -43,7 +44,7 @@ def test_model_algorithm():
     """
     Test the model's algorithm
     """
-    
+
     # Create a controlled dataset for testing
     data = pd.DataFrame(
         {
@@ -73,7 +74,7 @@ def test_compute_model_metrics():
     """
     #Test if compute_model_metrics function returns the expected values
     """
-    
+
     # Define a test set with controlled values
     y_true = np.array([0, 1, 0, 1, 0])
     y_pred = np.array([0, 1, 1, 1, 0])
@@ -89,3 +90,4 @@ def test_compute_model_metrics():
     assert round(precision, 4) == expected_precision
     assert round(recall, 4) == expected_recall
     assert round(fbeta, 4) == expected_fbeta
+
