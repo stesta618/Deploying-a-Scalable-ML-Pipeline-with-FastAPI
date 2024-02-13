@@ -1,4 +1,3 @@
-import pytest
 # TODO: add necessary import
 import pandas as pd
 import numpy as np
